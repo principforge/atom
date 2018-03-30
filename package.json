@@ -1,0 +1,59 @@
+{
+  "name": "atom",
+  "description": "Development of Atom (IoT Software)",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Yaroslav Shamatienko",
+    "email": "ShamatienkoYaroslav@users.noreply.github.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": "^9.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "DEBUG=nuxt:* nodemon --watch src/ --watch config/ src/index.js",
+    "prestart": "npm run build",
+    "start": "NODE_ENV=production node src/",
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "mocha": "mocha test/ --recursive --exit",
+    "debud": "node src/index.js"
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^2.1.1",
+    "@feathersjs/authentication-jwt": "^2.0.0",
+    "@feathersjs/authentication-local": "^1.1.0",
+    "@feathersjs/configuration": "^1.0.1",
+    "@feathersjs/express": "^1.1.2",
+    "@feathersjs/feathers": "^3.1.4",
+    "compression": "^1.7.2",
+    "cors": "^2.8.4",
+    "feathers-nedb": "^3.0.0",
+    "helmet": "^3.9.0",
+    "nedb": "^1.8.0",
+    "node-red": "^0.18.4",
+    "normalize.css": "^8.0.0",
+    "nuxt": "^1.4.0",
+    "serve-favicon": "^2.4.5",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.17.2",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  }
+}

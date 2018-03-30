@@ -1,2 +1,8 @@
 # atom
-Development of Atom
+
+> Development of Atom (IoT Software)
+
+### DEV
+```
+npm run dev
+```
